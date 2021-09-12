@@ -1,14 +1,19 @@
-
+import java.util.Comparator;
 
 public class Fruit {
-	private int no;
-	private String name;
-	private int price;
+	int no;
+	String name;
+	int price;
 	
 	public Fruit (int no, String name, int price) {
 		super();
 		this.no = no;
 		this.name = name;
 		this.price = price;
+	}
+	
+	@Override
+	public String toString() {
+		return "Fruit [no=" + no + ", name=" + name +", price=" + price +"]";
 	}
 }

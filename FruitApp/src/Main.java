@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -17,6 +18,16 @@ public class Main {
 		fl.add(new Fruit(109, "pear", 1520));
 		fl.add(new Fruit(110, "tomato", 1300));
 		
+		System.out.println("Fruit list (ordered by name)");
+		Collections.sort(fl, new FruitComparator());
+		for(Fruit s: fl) {
+			System.out.println(s.toString());
+		}
+		System.out.println("Fruit list (reverse ordered by name)");
+		Collections.sort(fl, new FruitComparator());
+		for(Fruit s: fl) {
+			System.out.println(s.toString());
+		}
 	}
 
 }
